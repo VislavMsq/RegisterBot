@@ -12,7 +12,3 @@ spring:
     defer-datasource-initialization: false
     open-in-view: false
     show-sql: false
-
-  liquibase:
-    change-log: classpath:db/changelog/changelog-master.xml
-#    drop-first: true

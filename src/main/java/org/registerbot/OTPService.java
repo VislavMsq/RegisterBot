@@ -22,6 +22,8 @@ public class OTPService {
 
     private Long generateRandomOTP(){
         Random random = new Random();
-        return 100000L + random.nextLong() % 900000L;
+        long leftLimit = 1_000_000L;
+        long rightLimit = 1_000_000_000L;
+        return leftLimit + Math.abs(random.nextLong(leftLimit, rightLimit));
     }
 }
